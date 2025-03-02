@@ -25,7 +25,7 @@ public class Lab2 {
             if(birds[i].isRaptor()) {
                 System.out.println("Усі нехижі птахи ховаються і сідають на землю!");
                 if ( i > 0) {
-                    for (int j = i - 1; !(birds[j].isRaptor()); j--) {
+                    for (int j = i - 1; j >= 0 && !(birds[j].isRaptor()); j--) {
                         System.out.printf("нехижа птаха %s сховалась і приземлилась %n", birds[j].getName());
                     }
                 }

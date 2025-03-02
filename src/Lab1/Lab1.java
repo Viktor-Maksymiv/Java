@@ -3,9 +3,18 @@ package Lab1;
 public class Lab1 {
     public static void main(String[] args) {
         HashSet set = new HashSet();
-        set.InsertElement(2, "hello".toCharArray());
-        set.InsertElement(12, "world".toCharArray());
-        System.out.println(set.GetElement(2));
+        set.InsertElement(45, "hello".toCharArray());
+        set.InsertElement(145, "world".toCharArray());
+        set.InsertElement(99, "Java".toCharArray());
+        set.InsertElement(199, "Array".toCharArray());
+        System.out.println(set.GetElement(45));
+        set.DeleteElement(45);
+        set.InsertElement(45, "hello world!".toCharArray());
+        System.out.println(set.GetElement(45));
+        System.out.println(set.GetElement(145));
+        System.out.println(set.GetElement(99));
+        System.out.println(set.GetElement(299));
+
     }
     private static class HashSet {
 
@@ -31,7 +40,7 @@ public class Lab1 {
                 this.Table[HashFunc(key)].key = key;
                 this.Table[HashFunc(key)].value = value;
             } else if (Table[HashFunc(key)].key == key) {
-                System.out.println("Key is already in the table, the value has already been replaced");
+                System.out.println("Key is already in the table, the value has beed changed");
                 this.Table[HashFunc(key)].value = value;
             } else {
                 for (int i = HashFunc(key); i < Table.length; i++) {
