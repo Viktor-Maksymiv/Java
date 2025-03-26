@@ -5,6 +5,7 @@ public abstract class AbstractFactory {
 }
 
 class NonRaptorBirdFactory extends AbstractFactory {
+
     @Override
     public Bird getBird(String birdName) {
         if (birdName.equalsIgnoreCase("Сойка")) {
