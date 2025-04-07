@@ -27,3 +27,6 @@ bin/
 
 ### Mac OS ###
 .DS_Store
+
+src/Lab3/Pogoda.txt
+src/Lab4/result.kml
